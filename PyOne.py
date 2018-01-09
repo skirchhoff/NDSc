@@ -1,5 +1,6 @@
 '''
     device vendor scanner for local area networks 1.0
+    a small project to understand python
 '''
 
 import sched, time, os, json
