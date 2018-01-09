@@ -89,7 +89,7 @@ class PyOne:
 
     def read_OUI_file (self):
 
-        if os.path.isfile("/Users/stephan/PycharmProjects/PyOne/vendor_mac_stack"):
+        if os.path.isfile("vendor_mac_stack"):
             f1 = open("vendor_mac_stack")
             self.oui_by_id = json.loads(f1.read())
         else:
