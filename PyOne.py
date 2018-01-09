@@ -4,19 +4,7 @@
 
 import sched, time, os, json
 
-'''
-7c: 4:d0:cb:64:c0 - mac book air
-7c: 4:d0:da: 0:ce - mac book air
-d8:30:62:49:bb:4f - imac
-98:9e:63:89:74:53 - iphone se
-58:e2:8f:21: f:3f - iphone se
-E4:E4:AB:21:48:E4 - iphone se
-E4:E4:AB:24:E5:75 - iphone se ?
-58:55:ca:4e:d6:72 - apple tv
-d4:63:fe:47:a2:3d - Arcadyan Corporation
- 0:90:a9:d5:39:ce - WESTERN DIGITAL
- ifconfig
-'''
+
 
 class NTDevice:
 
@@ -125,7 +113,7 @@ class PyOne:
 
 
 
-
+# periodic calls test functions
 scheduler = sched.scheduler(time.time, time.sleep)
 def periodic(scheduler, interval, action, actionargs=()):
     scheduler.enter(interval, 1, periodic,(scheduler, interval, action, actionargs))
@@ -142,8 +130,8 @@ if __name__ == '__main__':
     o1 = PyOne()
     print("out")
 
-    # test for time based calls
-    #periodic(scheduler, 0.01, query_rate_limit,(PyOne()))
+    # test for periodic calls
+    # periodic(scheduler, 0.01, query_rate_limit,(PyOne()))
 
 
 
